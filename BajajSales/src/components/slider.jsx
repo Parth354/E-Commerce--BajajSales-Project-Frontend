@@ -17,13 +17,13 @@ const SlideImageCarousel = () => {
   return (
     <Slider {...settings}>
       <div>
-        <img src="src/assets/sellerregister1(3).jpg" style={{height:"100vh"}} alt="Slide 1" />
+        <img src="/sellerregister1(3).jpg" style={{height:"100vh"}} alt="Slide 1" />
       </div>
       <div>
-        <img src="src/assets/sellerregister1(2).jpg" style={{height:"100vh"}} alt="Slide 2" />
+        <img src="/sellerregister1(2).jpg" style={{height:"100vh"}} alt="Slide 2" />
       </div>
       <div>
-        <img src="src/assets/sellerregister1(1).jpg" style={{height:"100vh"}} alt="Slide 3" />
+        <img src="/sellerregister1(1).jpg" style={{height:"100vh"}} alt="Slide 3" />
       </div>
     </Slider>
   );

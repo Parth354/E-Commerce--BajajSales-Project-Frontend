@@ -110,7 +110,7 @@ function Header() {
                                     <button type="submit" onClick={() => setIsCategoryOpen(true)} className="bg-yellow-500 text-black font-medium rounded-l-lg flex items-center px-3"><img src="src/assets/categories-icon.png" className="mx-1" style={{ width: "20px" }}></img><p className="px-1">Category</p></button>
                                     <input type="search" onChange={handleInputChange} placeholder="Search Products" className={"text-black h-8 w-60 px-2 focus:outline-none focus:ring-0"}></input>
                                     <button type="submit" className="bg-yellow-500 rounded-r-lg px-2">
-                                        <img src="src/assets/search.png" style={{ width: "20px" }}></img></button>
+                                        <img src="/search.png" style={{ width: "20px" }}></img></button>
                                 </div>
                                 {isSearchOpen && searchResult && (<div ref={dropdownRef} className="absolute top-14 bg-black px-2 bg-opacity-55 z-10" style={{ width: "22.5rem" }}>
                                     <ul className="flex flex-wrap">
@@ -161,7 +161,7 @@ function Header() {
                                 <Link to={"/cart"}>
                                     <div className="flex items-center"
                                         onMouseLeave={() => setIsHovered(false)}>
-                                        <img src={isHovered ? "/cart(hover).png" : "src/assets/cart.png"} style={{ height: "25px", width: "40px" }}></img>
+                                        <img src={isHovered ? "/cart(hover).png" : "/cart.png"} style={{ height: "25px", width: "40px" }}></img>
                                         <p className="text-xs">{cart.length}</p>
                                     </div>
                                 </Link>

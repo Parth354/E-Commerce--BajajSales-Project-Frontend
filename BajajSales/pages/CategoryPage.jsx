@@ -31,7 +31,7 @@ export default function Category() {
                     <div className="py-2 justify-center items-center w-full flex flex-wrap">
                         <div className="flex justify-center w-full">
                             <div>
-                                <img src="/src/assets/emptysb.png" style={{ height: "20rem" }}></img>
+                                <img src="/emptysb.png" style={{ height: "20rem" }}></img>
                             </div>
                         </div>
                         <div className="font-bold text-1/2xl">
