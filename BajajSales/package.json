@@ -17,7 +17,8 @@
     "slick-carousel": "^1.8.1",
     "react-redux":"^9.1.0",
     "react-router-dom":"^6.22.3",
-    "@reduxjs/toolkit":"^2.2.1"
+    "@reduxjs/toolkit":"^2.2.1",
+    "react-hook-form": "^7.51.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
