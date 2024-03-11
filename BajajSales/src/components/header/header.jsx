@@ -107,7 +107,7 @@ function Header() {
                         <form onSubmit={handleSubmit}>
                             <div className="flex flex-wrap">
                                 <div className="flex w-full">
-                                    <button type="submit" onClick={() => setIsCategoryOpen(true)} className="bg-yellow-500 text-black font-medium rounded-l-lg flex items-center px-3"><img src="src/assets/categories-icon.png" className="mx-1" style={{ width: "20px" }}></img><p className="px-1">Category</p></button>
+                                    <button type="submit" onClick={() => setIsCategoryOpen(true)} className="bg-yellow-500 text-black font-medium rounded-l-lg flex items-center px-3"><img src="/categories-icon.png" className="mx-1" style={{ width: "20px" }}></img><p className="px-1">Category</p></button>
                                     <input type="search" onChange={handleInputChange} placeholder="Search Products" className={"text-black h-8 w-60 px-2 focus:outline-none focus:ring-0"}></input>
                                     <button type="submit" className="bg-yellow-500 rounded-r-lg px-2">
                                         <img src="/search.png" style={{ width: "20px" }}></img></button>
