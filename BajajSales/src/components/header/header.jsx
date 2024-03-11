@@ -161,7 +161,7 @@ function Header() {
                                 <Link to={"/cart"}>
                                     <div className="flex items-center"
                                         onMouseLeave={() => setIsHovered(false)}>
-                                        <img src={isHovered ? "src/assets/cart(hover).png" : "src/assets/cart.png"} style={{ height: "25px", width: "40px" }}></img>
+                                        <img src={isHovered ? "/cart(hover).png" : "src/assets/cart.png"} style={{ height: "25px", width: "40px" }}></img>
                                         <p className="text-xs">{cart.length}</p>
                                     </div>
                                 </Link>
@@ -170,7 +170,7 @@ function Header() {
                         {authStatus && (
                             <li>
                                 <button className="rounded-full flex px-2 py-1" onClick={()=>setIsProfileClicked(true) }>
-                                            <img src="src/assets/profile.png" style={{ height: "33px", width: "33px" }}></img>
+                                            <img src="/profile.png" style={{ height: "33px", width: "33px" }}></img>
                                 </button>
                             </li>
                         )}
