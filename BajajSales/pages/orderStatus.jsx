@@ -26,7 +26,7 @@ export default function OrderStatus() {
 
     return (
         <>
-            <div className="w-full z-0 h-screen flex items-center justify-center " style={{ backgroundImage: `url('src/assets/registerbg.jpg')`, backgroundSize: 'cover' }}>
+            <div className="w-full z-0 h-screen flex items-center justify-center " style={{ backgroundImage: `url('/registerbg.jpg')`, backgroundSize: 'cover' }}>
                 <div className="z-10 mx-auto w-full max-w-lg bg-black text-white rounded-xl p-10 border border-black/10 bg-opacity-45" >
                     <div className="flex w-full justify-center">
                         <p className="font-black text-2xl pb-2">Order Status(Under Develop)</p>

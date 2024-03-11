@@ -87,7 +87,7 @@ export default function UserDashboard() {
         "Puducherry"];
 
     return (
-        <div className="w-full z-0 h-screen flex items-center justify-center " style={{ backgroundImage: `url('src/assets/registerbg.jpg')`, backgroundSize: 'cover', }}>
+        <div className="w-full z-0 h-screen flex items-center justify-center " style={{ backgroundImage: `url('/registerbg.jpg')`, backgroundSize: 'cover', }}>
             <div className="z-10 mx-auto w-full max-w-lg bg-black text-white rounded-xl p-10 border border-black/10 bg-opacity-45" >
                 <div className="container -mr-10" style={{ maxHeight: '480px', overflowY: 'auto' }}>
                     <form onSubmit={handleSubmit(Update)} className=' overflow-y-auto'>                
