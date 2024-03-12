@@ -17,7 +17,7 @@ export default function ProductPage() {
     }, [segments])
     const getData = async () => {
         try {
-            const response = await fetch('http://localhost:8000/bajajsales/getProductbyId', {
+            const response = await fetch(`${process.env.SERVER}/bajajsales/getProductbyId`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

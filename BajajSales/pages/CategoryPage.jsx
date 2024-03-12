@@ -9,7 +9,7 @@ export default function Category() {
 
     const fetchCategorywiseProducts = async () => {
         try {
-            const response = await fetch(`http://localhost:8000/bajajsales/search?q=${item}`);
+            const response = await fetch(`${process.env.SERVER}/bajajsales/search?q=${item}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch Search results');
             }

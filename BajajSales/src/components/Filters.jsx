@@ -9,7 +9,7 @@ export default function Filter() {
     const filter= (async(data)=>{
         console.log(data)
      try {
-        const response= await fetch(`http://localhost:8000/bajajsales/filter?q=${data}`)
+        const response= await fetch(`${process.env.SERVER}/bajajsales/filter?q=${data}`)
         if (!response.ok) {
             throw new Error('Failed to Apply Filters');
         }

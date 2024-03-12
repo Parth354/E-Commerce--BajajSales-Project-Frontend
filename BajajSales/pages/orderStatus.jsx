@@ -8,7 +8,7 @@ export default function OrderStatus() {
 
     const submit = async (_id) => {
         try {
-            const response = await fetch('http://localhost:8000/bajajsales/order-status', {
+            const response = await fetch(`${process.env.SERVER}/bajajsales/order-status`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

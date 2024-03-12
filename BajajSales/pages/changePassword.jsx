@@ -26,7 +26,7 @@ export default function ChangePassword() {
         };
 
         try {
-            const response = await fetch('http://localhost:8000/bajajsales/change-password', {
+            const response = await fetch(`${process.env.SERVER}/bajajsales/change-password`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

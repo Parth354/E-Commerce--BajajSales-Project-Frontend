@@ -13,7 +13,7 @@ function Login() {
 
     const login = async (data) => {
         try {
-            const session = await fetch('http://localhost:8000/bajajsales/login', {
+            const session = await fetch(`${process.env.SERVER}/bajajsales/login`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

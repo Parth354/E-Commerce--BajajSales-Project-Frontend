@@ -13,7 +13,7 @@ export default function Register() {
 
     const create = async (data) => {
         try {
-            const response = await fetch('http://localhost:8000/bajajsales/register', {
+            const response = await fetch(`${SERVER}/bajajsales/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ export default function Register() {
     };
     const generateOtp = async (email) => {
         try {
-            const response = await fetch('http://localhost:8000/bajajsales/email-OTP', {
+            const response = await fetch(`${process.env.SERVER}/bajajsales/email-OTP`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export default function Register() {
     };
     const verifyOTP = async (OTP) => {
         try {
-            const response = await fetch('http://localhost:8000/bajajsales/verify-OTP', {
+            const response = await fetch(`${process.env.SERVER}/bajajsales/verify-OTP`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

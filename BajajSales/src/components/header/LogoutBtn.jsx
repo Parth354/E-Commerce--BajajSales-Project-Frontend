@@ -9,7 +9,7 @@ function LogoutBtn(){
     const dispatch = useDispatch()
     const logoutHandler= async ()=>{
        try {
-        const response = await fetch('http://localhost:8000/bajajsales/logout',{
+        const response = await fetch(`${process.env.SERVER}/bajajsales/logout`,{
          method:"POST",
          headers:{
              "Content-Type":'application/json',

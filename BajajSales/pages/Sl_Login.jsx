@@ -14,7 +14,7 @@ export default function Sl_Login() {
     const [showInput, setShowInput] = useState(false)
     const generateOtp = async (phoneNo) => {
         try {
-            const response = await fetch('http://localhost:8000/bajajsales/smsOTP', {
+            const response = await fetch(`${process.env.SERVER}/bajajsales/smsOTP`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export default function Sl_Login() {
     };
     const verifyOTP = async (OTP, phoneNo) => {
         try {
-            const response = await fetch('http://localhost:8000/bajajsales/verifyOTP', {
+            const response = await fetch(`${process.env.SERVER}/bajajsales/verifyOTP`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export default function Sl_Login() {
         else {
             const OtpVerified = await verifyOTP(data.OTP,data.phoneNo)
             if (OtpVerified.ok) {
-                const response = await fetch('http://localhost:8000/bajajsales/seller-login', {
+                const response = await fetch(`${process.env.SERVER}/bajajsales/seller-login`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
