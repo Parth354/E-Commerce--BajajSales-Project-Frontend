@@ -53,7 +53,7 @@ function Header() {
         setQuery(event.target.value);
         if (query) {
             try {
-                const response = await fetch(`${process.env.SERVER}/bajajsales/search?q=${query}`)
+                const response = await fetch(`${import.meta.env.VITE_SERVER}/bajajsales/search?q=${query}`)
                 if (!response.ok) {
                     throw new Error('Failed to fetch Search results');
                 }

@@ -15,7 +15,7 @@ export default function sellerRegister() {
 
     const create = async (data) => {
         try {
-            const response = await fetch(`${process.env.SERVER}/bajajsales/seller-register`, {
+            const response = await fetch(`${import.meta.env.VITE_SERVER}/bajajsales/seller-register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ export default function sellerRegister() {
     };
     const generateOtp = async (phoneNo) => {
         try {
-            const response = await fetch(`${process.env.SERVER}/bajajsales/smsOTP`, {
+            const response = await fetch(`${import.meta.env.VITE_SERVER}/bajajsales/smsOTP`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export default function sellerRegister() {
     };
     const verifyOTP = async (OTP, phoneNo) => {
         try {
-            const response = await fetch(`${process.env.SERVER}/bajajsales/verifyOTP`, {
+            const response = await fetch(`${import.meta.env.VITE_SERVER}/bajajsales/verifyOTP`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

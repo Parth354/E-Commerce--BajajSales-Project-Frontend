@@ -17,7 +17,7 @@ export default function ProductPage() {
     }, [segments])
     const getData = async () => {
         try {
-            const response = await fetch(`${process.env.SERVER}/bajajsales/getProductbyId`, {
+            const response = await fetch(`${import.meta.env.VITE_SERVER}/bajajsales/getProductbyId`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

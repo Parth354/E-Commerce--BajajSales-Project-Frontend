@@ -28,7 +28,7 @@ export default function UserDashboard() {
             });
             formData.append("_id", `${currentData?.user._id}`);
             formData.append("accessToken", `${currentData?.accessToken}`);
-            const response = await fetch(`${process.env.SERVER}/bajajsales/update-userDetails`, {
+            const response = await fetch(`${import.meta.env.VITE_SERVER}/bajajsales/update-userDetails`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'multipart/form-data'

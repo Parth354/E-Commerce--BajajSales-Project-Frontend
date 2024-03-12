@@ -26,7 +26,7 @@ export default function ChangePassword() {
         };
 
         try {
-            const response = await fetch(`${process.env.SERVER}/bajajsales/change-password`, {
+            const response = await fetch(`${import.meta.env.VITE_SERVER}/bajajsales/change-password`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

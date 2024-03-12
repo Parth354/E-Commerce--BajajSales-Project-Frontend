@@ -34,7 +34,7 @@ const addProduct = () => {
       });
      
         formData.append("_id", `${_id}`);
-      const response = await fetch(`${process.env.SERVER}/bajajsales/add-product`, {
+      const response = await fetch(`${import.meta.env.VITE_SERVER}/bajajsales/add-product`, {
         method: "POST",
         body: formData
       });
