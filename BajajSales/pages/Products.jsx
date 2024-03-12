@@ -10,7 +10,7 @@ export default function AllProduct() {
     useEffect(() => {
         const getDetails = async () => {
             try {
-                const response = await fetch("http://localhost:8000/bajajsales/product-details", {
+                const response = await fetch("https://bajaj-sales-backend.onrender.com/bajajsales/product-details", {
                     method: "GET",
                 })
                 const result = await response.json()
