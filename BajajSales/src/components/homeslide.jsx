@@ -17,7 +17,7 @@ const HomeSlide = () => {
   return (
     <Slider {...settings}>
       <div>
-        <img src="/home1.jpg" style={{width:"100vw", height:'64vh'}} alt="Slide 1" />
+        <img src="/home1.jpg" style={{width:"100vw",height:"50vh"}} alt="Slide 1" />
       </div>
       <div>
         <img src="/home2.jpg" style={{width:"100vw"}} alt="Slide 2" />

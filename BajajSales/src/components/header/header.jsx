@@ -6,7 +6,9 @@ import ProfileOptions from "../Profileoptions.jsx";
 
 
 function Header() {
-    const authStatus = useSelector((state) => state.auth.status)
+    const authStatus = useSelector((state) => state.auth.status);
+    const currentData = useSelector((state) => state.auth.userData);
+    const [avatar, setAvatar] = useState(currentData?.user?.avatar)
     const navigate = useNavigate()
     const cart = useSelector((state) => state.cart.cartData)
     const [isHovered, setIsHovered] = useState(false);
@@ -14,7 +16,7 @@ function Header() {
     const [query, setQuery] = useState('');
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isCategoryOpen, setIsCategoryOpen] = useState(false)
-    const [isProfileClicked , setIsProfileClicked] = useState(false)
+    const [isProfileClicked, setIsProfileClicked] = useState(false)
     const dropdownRef = useRef(null);
 
     const categories = [
@@ -35,6 +37,10 @@ function Header() {
         "Baby & Kids",
         "Travel & Luggage"
     ];
+
+    useEffect(() => {
+        setAvatar(currentData?.user?.avatar)
+    }, [currentData])
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -169,18 +175,18 @@ function Header() {
                         </li>
                         {authStatus && (
                             <li>
-                                <button className="rounded-full flex px-2 py-1" onClick={()=>setIsProfileClicked(true) }>
-                                            <img src="/profile.png" style={{ height: "33px", width: "33px" }}></img>
+                                <button className="rounded-full flex px-2 py-1" onClick={() => setIsProfileClicked(true)}>
+                                    <img src={avatar ? avatar : '/profile.png'} style={{ height: "33px", width: "33px", borderRadius:"100px" }}></img>
                                 </button>
                             </li>
                         )}
                     </ul>
                 </nav>
             </Container >
-            {isProfileClicked && authStatus && 
-            (
-                <ProfileOptions isOpen={()=> setIsProfileClicked(true)} onClose={() => setIsProfileClicked(false)} />
-            )}
+            {isProfileClicked && authStatus &&
+                (
+                    <ProfileOptions isOpen={() => setIsProfileClicked(true)} onClose={() => setIsProfileClicked(false)} />
+                )}
         </header >
     )
 }

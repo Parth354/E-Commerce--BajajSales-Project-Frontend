@@ -21,15 +21,15 @@ function Login() {
                 body: JSON.stringify(data),
 
             });
-            if (session) {
-                session.json()
-                    .then((result) => {
-                        const { data } = result;
-                        dispatch(authLogin({ userData: data }))
-                    }).catch((error) => {
-                        console.log(error)
-                    })
+            if (session.ok) {
+                const result = await session.json()
+                const { data } = result
+                dispatch(authLogin({ userData: data }))
                 navigate("/")
+            }else{
+                const errormsg= await session.json();
+                const {message} = errormsg;
+                setError(message)
             }
         } catch (error) {
             setError(error.message)

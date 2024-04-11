@@ -7,7 +7,7 @@ const InitialState = {
 
 const authSlice = createSlice({
     name: "auth",
-    initialState:InitialState,
+    initialState: InitialState,
     reducers: {
         login: (state, action) => {
             state.status = true;
@@ -16,6 +16,13 @@ const authSlice = createSlice({
         logout: (state) => {
             state.status = false;
             state.userData = null;
+        },
+        updateUserInfo: (state, action) => {
+            state.userData = {
+                accessToken:state.userData.accessToken,
+                refreshToken:state.userData.refreshToken,
+                user:action.payload.userData
+            }
         }
     }
 })
@@ -46,35 +53,35 @@ const product_info = createSlice({
     initialState: pro_initialState,
     reducers: {
         addprod_info: (state, action) => {
-            state.productData= action.payload.productData;
+            state.productData = action.payload.productData;
         },
         remprod_info: (state) => {
-            state.productData=null
+            state.productData = null
         }
     }
 })
 
-const cartIntialState ={
-    cartData : [],
+const cartIntialState = {
+    cartData: [],
     quantity: {}
 }
 
-const cartSlice =createSlice({
-    name:"cart",
-    initialState:cartIntialState,
-    reducers:{
-        addtoCart :(state,action) =>{
+const cartSlice = createSlice({
+    name: "cart",
+    initialState: cartIntialState,
+    reducers: {
+        addtoCart: (state, action) => {
             const isUnique = state.cartData.every(item => item._id !== action.payload.cartData._id);
             if (isUnique) {
-                state.cartData.push(action.payload.cartData);   
-                state.quantity[action.payload.cartData._id] = 1;         
+                state.cartData.push(action.payload.cartData);
+                state.quantity[action.payload.cartData._id] = 1;
             }
         },
-        remFromCart:(state,action)=>{
+        remFromCart: (state, action) => {
             const productIdToRemove = action.payload._id;
             state.cartData = state.cartData.filter(item => item._id != `${productIdToRemove}`);
         },
-        updateQuantity:(state,action)=>{
+        updateQuantity: (state, action) => {
             const { _id, quantity } = action.payload;
             state.quantity[_id] = quantity;
         }
@@ -82,9 +89,9 @@ const cartSlice =createSlice({
     }
 })
 
-export const { login, logout } = authSlice.actions;
+export const { login, logout, updateUserInfo } = authSlice.actions;
 export default product_info.reducer;
 export const { sl_login, sl_logout } = sl_authSlice.actions;
-export { sl_authSlice ,authSlice,cartSlice }
+export { sl_authSlice, authSlice, cartSlice }
 export const { addprod_info, remprod_info } = product_info.actions;
-export const {addtoCart , remFromCart, updateQuantity}=cartSlice.actions;
+export const { addtoCart, remFromCart, updateQuantity } = cartSlice.actions;

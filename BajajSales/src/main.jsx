@@ -21,6 +21,7 @@ import UserDashboard from '../pages/userDashboard.jsx';
 import ChangePassword from '../pages/changePassword.jsx';
 import OrderStatus from '../pages/orderStatus.jsx';
 import Checkout from '../pages/checkout.jsx';
+import SearchResult from '../pages/SearchResult.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <Cart />
+      },
+      {
+        path:'/searchResults',
+        element:<SearchResult/>
+
       },
       {
         path: "/product/:slug",
