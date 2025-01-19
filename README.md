@@ -14,7 +14,7 @@ Bajaj Sales is a modern eCommerce platform built with the MERN (MongoDB, Express
 - **Frontend:** React.js
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
-- **Styling:** CSS, Bootstrap (or any other framework you prefer)
+- **Styling:** CSS
 
 ## Requirements
 
